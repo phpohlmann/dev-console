@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { projectsRegistry } from "@/data/projects";
 import {
   ExternalLink,
@@ -8,25 +9,38 @@ import {
   ShieldCheck,
   Accessibility,
   Search,
+  LucideIcon,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
+interface MetricProps {
+  icon: LucideIcon;
+  label: string;
+  score: number;
+}
+
+/**
+ * SENIOR FIX: Component defined outside to prevent re-renders
+ */
+const Metric = ({ icon: Icon, label, score }: MetricProps) => (
+  <div className="flex flex-col items-center p-4 bg-muted/30 rounded-xl border border-border/50">
+    <Icon className="w-5 h-5 mb-2 text-primary" />
+    <span className="text-[10px] uppercase font-bold text-muted-foreground tracking-widest">
+      {label}
+    </span>
+    <span className="text-xl font-mono font-bold text-foreground">{score}</span>
+  </div>
+);
 
 export function ProjectDashboard({ fileId }: { fileId: string }) {
   const project = projectsRegistry[fileId];
 
-  if (!project) return <div>Project configuration not found.</div>;
-
-  const Metric = ({ icon: Icon, label, score }: any) => (
-    <div className="flex flex-col items-center p-4 bg-muted/30 rounded-xl border border-border/50">
-      <Icon className="w-5 h-5 mb-2 text-primary" />
-      <span className="text-[10px] uppercase font-bold text-muted-foreground tracking-widest">
-        {label}
-      </span>
-      <span className="text-xl font-mono font-bold text-foreground">
-        {score}
-      </span>
-    </div>
-  );
+  if (!project)
+    return (
+      <div className="p-8 text-muted-foreground">
+        Project configuration not found.
+      </div>
+    );
 
   return (
     <div className="space-y-10 animate-in zoom-in-95 duration-500">
@@ -53,12 +67,12 @@ export function ProjectDashboard({ fileId }: { fileId: string }) {
             asChild
             className="cursor-pointer"
           >
-            <a href={project.repoUrl} target="_blank">
+            <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
               <Github className="w-4 h-4 mr-2" /> Code
             </a>
           </Button>
           <Button size="sm" asChild className="cursor-pointer">
-            <a href={project.liveUrl} target="_blank">
+            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
               <ExternalLink className="w-4 h-4 mr-2" /> Live Demo
             </a>
           </Button>

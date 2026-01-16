@@ -4,7 +4,6 @@ import { Files, Search, Settings, Github, Linkedin } from "lucide-react";
 import { useUIStore, ActivityTab } from "@/store/use-ui-store";
 import { cn } from "@/lib/utils";
 
-// FIX: NavItem defined OUTSIDE to avoid re-creation during render
 interface NavItemProps {
   id: ActivityTab;
   icon: React.ElementType;
@@ -12,7 +11,11 @@ interface NavItemProps {
   onClick: () => void;
 }
 
-const NavItem = ({ id, icon: Icon, isActive, onClick }: NavItemProps) => (
+const NavItem = ({
+  icon: Icon,
+  isActive,
+  onClick,
+}: Omit<NavItemProps, "id">) => (
   <div
     onClick={onClick}
     className={cn(
@@ -34,13 +37,11 @@ export function ActivityBar() {
     <div className="w-12 bg-card border-r border-border flex flex-col items-center py-2 justify-between">
       <div className="w-full space-y-1">
         <NavItem
-          id="explorer"
           icon={Files}
           isActive={activeTab === "explorer"}
           onClick={() => setActiveTab("explorer")}
         />
         <NavItem
-          id="search"
           icon={Search}
           isActive={activeTab === "search"}
           onClick={() => setActiveTab("search")}
@@ -63,7 +64,6 @@ export function ActivityBar() {
           <Linkedin size={20} />
         </a>
         <NavItem
-          id="settings"
           icon={Settings}
           isActive={activeTab === "settings"}
           onClick={() => setActiveTab("settings")}

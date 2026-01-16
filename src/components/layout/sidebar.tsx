@@ -30,7 +30,7 @@ export function Sidebar() {
 
         {activeTab === "search" && (
           <div className="p-4 text-xs text-muted-foreground italic">
-            Search implementation coming in Phase 4...
+            Search implementation coming soon...
           </div>
         )}
       </div>
