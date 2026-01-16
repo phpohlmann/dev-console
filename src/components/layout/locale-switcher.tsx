@@ -1,8 +1,8 @@
+// MODIFICATION START
 "use client";
 
 import { useLocale } from "next-intl";
 import { useRouter, usePathname } from "@/i18n/routing";
-import { cn } from "@/lib/utils";
 import { Globe } from "lucide-react";
 
 export function LocaleSwitcher() {
@@ -31,3 +31,4 @@ export function LocaleSwitcher() {
     </button>
   );
 }
+// MODIFICATION END

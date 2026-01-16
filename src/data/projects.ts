@@ -1,3 +1,4 @@
+// MODIFICATION START
 export interface ProjectData {
   id: string;
   repoUrl: string;
@@ -17,6 +18,20 @@ export const projectsRegistry: Record<string, ProjectData> = {
     repoUrl: "https://github.com/phpohlmann/RepoContext",
     liveUrl: "https://repo-context.vercel.app",
     lighthouse: { perf: 100, acc: 100, best: 100, seo: 100 },
-    stack: ["Next.js 16", "TypeScript", "Zustand", "Tailwind CSS v4"],
+    stack: [
+      "Next.js 16",
+      "TypeScript",
+      "Zustand",
+      "Tailwind v4",
+      "js-tiktoken",
+    ],
+  },
+  "dev-console.json": {
+    id: "dev-console",
+    repoUrl: "https://github.com/phpohlmann/dev-console",
+    liveUrl: "https://pohlmann.dev",
+    lighthouse: { perf: 100, acc: 100, best: 100, seo: 100 },
+    stack: ["Next.js 16", "i18n", "Framer Motion", "Shadcn UI"],
   },
 };
+// MODIFICATION END
