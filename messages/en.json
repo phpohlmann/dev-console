@@ -1,12 +1,26 @@
 {
   "Index": {
     "title": "Pedro Pohlmann",
-    "role": "Full-Stack Developer",
-    "motivation": "I code to build tools that are fast, reliable, and good enough that I’d actually use them myself."
+    "role": "Full-Stack Engineer",
+    "motivation": "I build high-performance developer tools that I would actually use myself. Engineering-first mindset."
   },
   "Navigation": {
     "explorer": "Explorer",
     "search": "Search",
     "settings": "Settings"
+  },
+  "Content": {
+    "identity": {
+      "title": "identity.md",
+      "body": "Software Engineering student focused on building robust, scalable web utilities. I specialize in the TypeScript ecosystem, with a deep interest in performance optimization and security architecture."
+    },
+    "contacts": {
+      "title": "contacts.ts",
+      "body": ""
+    },
+    "education": {
+      "title": "education.txt",
+      "body": ""
+    }
   }
 }

@@ -12,11 +12,15 @@
   "Content": {
     "identity": {
       "title": "identidade.md",
-      "body": "Desenvolvedor focado em ferramentas de alta performance. Atualmente focado em TypeScript e Next.js."
+      "body": "Estudante de Engenharia de Software focado em construir utilitários web robustos e escaláveis. Especialista no ecossistema TypeScript, com profundo interesse em otimização de performance e arquitetura de segurança."
     },
     "contacts": {
       "title": "contatos.ts",
-      "body": "LinkedIn: linkedin.com/in/pedropohlmann\nGitHub: github.com/phpohlmann"
+      "body": ""
+    },
+    "education": {
+      "title": "formacao.txt",
+      "body": ""
     }
   }
 }
