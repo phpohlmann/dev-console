@@ -21,7 +21,7 @@ export function TabItem({ fileId, isActive }: TabItemProps) {
     <div
       onClick={() => openFile(fileId)}
       className={cn(
-        "h-9 px-3 flex items-center gap-2 border-r border-border cursor-pointer transition-colors group min-w-[120px] max-w-[200px]",
+        "h-9 px-3 flex items-center gap-2 border-r border-border cursor-pointer transition-colors group min-w-30 max-w-50",
         isActive
           ? "bg-background text-foreground border-t-2 border-t-primary"
           : "bg-muted/30 text-muted-foreground hover:bg-muted/50"
