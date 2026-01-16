@@ -1,7 +1,9 @@
+// MODIFICATION START
 "use client";
 
 import { useUIStore } from "@/store/use-ui-store";
 import { TabBar } from "./tab-bar";
+import { Breadcrumbs } from "../workbench/breadcrumbs"; // NEW IMPORT
 import { MarkdownView } from "../workbench/markdown-view";
 import { ProjectDashboard } from "../workbench/project-dashboard";
 
@@ -15,7 +17,6 @@ export function Workbench() {
       return <ProjectDashboard fileId={activeFileId} />;
     }
 
-    // Default to Markdown for everything else
     return <MarkdownView fileId={activeFileId} />;
   };
 
@@ -32,9 +33,11 @@ export function Workbench() {
   return (
     <div className="flex-1 flex flex-col bg-background overflow-hidden">
       <TabBar />
+      <Breadcrumbs /> {/* Inserted here */}
       <main className="flex-1 overflow-y-auto custom-scrollbar p-6 md:p-12">
         <div className="max-w-4xl mx-auto">{renderContent()}</div>
       </main>
     </div>
   );
 }
+// MODIFICATION END

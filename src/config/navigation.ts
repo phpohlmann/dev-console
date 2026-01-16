@@ -71,3 +71,19 @@ export const navigationConfig: NavItem[] = [
     ],
   },
 ];
+
+export function getBreadcrumbs(
+  items: NavItem[],
+  targetId: string,
+  path: NavItem[] = []
+): NavItem[] | null {
+  for (const item of items) {
+    const currentPath = [...path, item];
+    if (item.id === targetId) return currentPath;
+    if (item.children) {
+      const found = getBreadcrumbs(item.children, targetId, currentPath);
+      if (found) return found;
+    }
+  }
+  return null;
+}
