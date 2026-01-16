@@ -1,0 +1,12 @@
+{
+  "Index": {
+    "title": "Pedro Pohlmann",
+    "role": "Full-Stack Developer",
+    "motivation": "I code to build tools that are fast, reliable, and good enough that I’d actually use them myself."
+  },
+  "Navigation": {
+    "explorer": "Explorer",
+    "search": "Search",
+    "settings": "Settings"
+  }
+}
