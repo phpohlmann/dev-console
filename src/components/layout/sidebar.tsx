@@ -1,4 +1,3 @@
-// MODIFICATION START
 "use client";
 
 import { useUIStore, AppTheme, AppDensity } from "@/store/use-ui-store";
@@ -16,6 +15,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
+import { cn } from "@/lib/utils";
 
 export function Sidebar() {
   const {
@@ -31,24 +31,28 @@ export function Sidebar() {
     setShowBreadcrumbs,
   } = useUIStore();
 
-  const t = useTranslations("Navigation");
+  const tNav = useTranslations("Navigation");
+  const tSet = useTranslations("Settings");
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
 
-  if (!isSidebarOpen) return null;
-
   return (
-    <div className="w-64 bg-card border-r border-border flex flex-col overflow-hidden animate-in slide-in-from-left-2 duration-300">
-      <div className="h-10 px-4 flex items-center bg-muted/30 border-b border-border/50">
+    <aside
+      className={cn(
+        "fixed inset-y-0 left-12 z-40 w-64 bg-card border-r border-border flex flex-col overflow-hidden transition-transform duration-300 ease-in-out md:relative md:left-0",
+        isSidebarOpen ? "translate-x-0" : "-translate-x-full md:hidden",
+      )}
+    >
+      <div className="h-10 px-4 flex items-center bg-muted/30 border-b border-border/50 shrink-0">
         <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground/80">
-          {t(activeTab)}
+          {tNav(activeTab)}
         </span>
       </div>
 
       <div className="flex-1 overflow-y-auto py-3 custom-scrollbar">
         {activeTab === "explorer" && (
-          <div className="space-y-0.5">
+          <div id="tour-explorer" className="space-y-0.5">
             {navigationConfig.map((node) => (
               <NavNode key={node.id} node={node} level={0} />
             ))}
@@ -59,50 +63,47 @@ export function Sidebar() {
           <div className="p-4 space-y-6 animate-in fade-in duration-500">
             <div className="space-y-4">
               <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">
-                Appearance
+                {tSet("appearance")}
               </p>
 
               <div className="space-y-2">
-                <Label className="text-xs">Editor Theme</Label>
+                <Label className="text-xs">{tSet("theme_label")}</Label>
                 <Select
                   value={theme}
-                  onValueChange={(v: AppTheme) => setTheme(v)}
+                  onValueChange={(v: string) => setTheme(v as AppTheme)}
                 >
-                  <SelectTrigger className="h-8 text-xs bg-muted/50 border-border/50">
+                  <SelectTrigger className="h-8 text-xs bg-muted/50 border-border/50 w-full">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="deep-carbon" className="cursor-pointer">
-                      Deep Carbon
+                    <SelectItem value="deep-carbon">
+                      {tSet("themes.carbon")}
                     </SelectItem>
-                    <SelectItem value="classic-dark" className="cursor-pointer">
-                      Classic Dark
+                    <SelectItem value="classic-dark">
+                      {tSet("themes.classic")}
                     </SelectItem>
-                    <SelectItem
-                      value="high-contrast"
-                      className="cursor-pointer"
-                    >
-                      High Contrast
+                    <SelectItem value="high-contrast">
+                      {tSet("themes.contrast")}
                     </SelectItem>
                   </SelectContent>
                 </Select>
               </div>
 
               <div className="space-y-2">
-                <Label className="text-xs">Interface Density</Label>
+                <Label className="text-xs">{tSet("density_label")}</Label>
                 <Select
                   value={density}
-                  onValueChange={(v: AppDensity) => setDensity(v)}
+                  onValueChange={(v: string) => setDensity(v as AppDensity)}
                 >
-                  <SelectTrigger className="h-8 text-xs bg-muted/50 border-border/50">
+                  <SelectTrigger className="h-8 text-xs bg-muted/50 border-border/50 w-full">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="comfortable" className="cursor-pointer">
-                      Comfortable
+                    <SelectItem value="comfortable">
+                      {tSet("densities.comfortable")}
                     </SelectItem>
-                    <SelectItem value="compact" className="cursor-pointer">
-                      Compact
+                    <SelectItem value="compact">
+                      {tSet("densities.compact")}
                     </SelectItem>
                   </SelectContent>
                 </Select>
@@ -113,10 +114,10 @@ export function Sidebar() {
 
             <div className="space-y-4">
               <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">
-                Localization
+                {tSet("localization")}
               </p>
               <div className="flex items-center justify-between">
-                <Label className="text-xs">Language</Label>
+                <Label className="text-xs">{tSet("language_label")}</Label>
                 <button
                   onClick={() =>
                     router.replace(pathname, {
@@ -134,11 +135,11 @@ export function Sidebar() {
 
             <div className="space-y-4">
               <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">
-                Workspace
+                {tSet("workspace")}
               </p>
 
               <div className="flex items-center justify-between">
-                <Label className="text-xs">Persist Tabs</Label>
+                <Label className="text-xs">{tSet("persist_tabs")}</Label>
                 <Switch
                   checked={persistTabs}
                   onCheckedChange={setPersistTabs}
@@ -147,7 +148,7 @@ export function Sidebar() {
               </div>
 
               <div className="flex items-center justify-between">
-                <Label className="text-xs">Breadcrumbs</Label>
+                <Label className="text-xs">{tSet("breadcrumbs")}</Label>
                 <Switch
                   checked={showBreadcrumbs}
                   onCheckedChange={setShowBreadcrumbs}
@@ -158,7 +159,6 @@ export function Sidebar() {
           </div>
         )}
       </div>
-    </div>
+    </aside>
   );
 }
-// MODIFICATION END

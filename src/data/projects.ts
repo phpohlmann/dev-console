@@ -17,7 +17,7 @@ export const projectsRegistry: Record<string, ProjectData> = {
     id: "repo-context",
     repoUrl: "https://github.com/phpohlmann/RepoContext",
     liveUrl: "https://repo-context.vercel.app",
-    brandColor: "#f97316", // Orange
+    brandColor: "#f97316",
     lighthouse: { perf: 100, acc: 100, best: 100, seo: 100 },
     stack: [
       "Next.js 16",
@@ -29,18 +29,10 @@ export const projectsRegistry: Record<string, ProjectData> = {
   },
   "grow-money.json": {
     id: "grow-money",
-    repoUrl: "https://github.com/phpohlmann/grow-money",
-    liveUrl: "https://grow-money.vercel.app",
-    brandColor: "#0052D4", // Logo Blue
-    lighthouse: { perf: 98, acc: 100, best: 100, seo: 100 },
-    stack: ["React", "PostgreSQL", "Node.js", "Financial API"],
-  },
-  "dev-console.json": {
-    id: "dev-console",
-    repoUrl: "https://github.com/phpohlmann/dev-console",
-    liveUrl: "https://pohlmann.dev",
-    brandColor: "#3b82f6", // System Blue
+    repoUrl: "https://github.com/phpohlmann/growMoney",
+    liveUrl: "https://grow-money-frontend.vercel.app/",
+    brandColor: "#0052D4",
     lighthouse: { perf: 100, acc: 100, best: 100, seo: 100 },
-    stack: ["Next.js 16", "i18n", "Framer Motion", "Shadcn UI"],
+    stack: ["React", "MongoDB", "Express.JS", "NextJS", "TurboRepo"],
   },
 };

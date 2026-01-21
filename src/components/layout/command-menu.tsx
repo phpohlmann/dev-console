@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import {
   CommandDialog,
   CommandEmpty,
@@ -14,19 +14,18 @@ import { useUIStore } from "@/store/use-ui-store";
 import { FileText, FileCode, FileJson, Hash, Terminal } from "lucide-react";
 
 export function CommandMenu() {
-  const [open, setOpen] = useState(false);
-  const { openFile } = useUIStore();
+  const { isCommandMenuOpen, setCommandMenuOpen, openFile } = useUIStore();
 
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
-        setOpen((open) => !open);
+        setCommandMenuOpen(!isCommandMenuOpen);
       }
     };
     document.addEventListener("keydown", down);
     return () => document.removeEventListener("keydown", down);
-  }, []);
+  }, [isCommandMenuOpen, setCommandMenuOpen]);
 
   const getAllFiles = (items: NavItem[]): NavItem[] => {
     let files: NavItem[] = [];
@@ -41,7 +40,7 @@ export function CommandMenu() {
 
   const handleSelect = (fileId: string) => {
     openFile(fileId);
-    setOpen(false);
+    setCommandMenuOpen(false);
   };
 
   const getIcon = (ext?: string) => {
@@ -60,7 +59,7 @@ export function CommandMenu() {
   };
 
   return (
-    <CommandDialog open={open} onOpenChange={setOpen}>
+    <CommandDialog open={isCommandMenuOpen} onOpenChange={setCommandMenuOpen}>
       <CommandInput placeholder="Type a filename or command..." />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>

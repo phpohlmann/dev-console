@@ -22,14 +22,14 @@ export const navigationConfig: NavItem[] = [
     kind: "directory",
     children: [
       {
-        id: "repo-context.json",
-        name: "repo-context.json",
+        id: "grow-money.json",
+        name: "grow-money.json",
         kind: "file",
         extension: "json",
       },
       {
-        id: "dev-console.json",
-        name: "dev-console.json",
+        id: "repo-context.json",
+        name: "repo-context.json",
         kind: "file",
         extension: "json",
       },
@@ -41,12 +41,6 @@ export const navigationConfig: NavItem[] = [
     kind: "directory",
     children: [
       { id: "stack.json", name: "stack.json", kind: "file", extension: "json" },
-      {
-        id: "learning.log",
-        name: "learning.log",
-        kind: "file",
-        extension: "log",
-      },
     ],
   },
   {
@@ -75,7 +69,7 @@ export const navigationConfig: NavItem[] = [
 export function getBreadcrumbs(
   items: NavItem[],
   targetId: string,
-  path: NavItem[] = []
+  path: NavItem[] = [],
 ): NavItem[] | null {
   for (const item of items) {
     const currentPath = [...path, item];

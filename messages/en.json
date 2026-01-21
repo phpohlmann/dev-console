@@ -1,26 +1,238 @@
 {
-  "Index": {
-    "title": "Pedro Pohlmann",
-    "role": "Full-Stack Engineer",
-    "motivation": "I build high-performance developer tools that I would actually use myself. Engineering-first mindset."
-  },
   "Navigation": {
     "explorer": "Explorer",
     "search": "Search",
     "settings": "Settings"
   },
-  "Content": {
-    "identity": {
-      "title": "identity.md",
-      "body": "Software Engineering student focused on building robust, scalable web utilities. I specialize in the TypeScript ecosystem, with a deep interest in performance optimization and security architecture."
+  "Settings": {
+    "appearance": "Appearance",
+    "theme_label": "Editor Theme",
+    "density_label": "Interface Density",
+    "themes": {
+      "carbon": "Deep Carbon",
+      "classic": "Classic Dark",
+      "contrast": "High Contrast"
     },
-    "contacts": {
-      "title": "contacts.ts",
-      "body": ""
+    "densities": {
+      "comfortable": "Comfortable",
+      "compact": "Compact"
     },
-    "education": {
-      "title": "education.txt",
-      "body": ""
+    "localization": "Localization",
+    "language_label": "Language",
+    "workspace": "Workspace",
+    "persist_tabs": "Persist Tabs",
+    "breadcrumbs": "Breadcrumbs"
+  },
+  "SEO": {
+    "title": "Pedro Pohlmann | Engineering Console",
+    "description": "Interactive portfolio of Pedro Pohlmann. Software Engineering student focused on high-performance systems and clean architecture.",
+    "keywords": "Developer, Software Engineer, Portfolio, Next.js, React, TypeScript, Pedro Pohlmann"
+  },
+  "Identity": {
+    "title": "identity.md",
+    "role": "Software Engineering Student",
+    "location": "Taquara, Brazil",
+    "ready_badge": "Open to Work",
+    "cv_button": "Download Full CV",
+    "manifesto_label": "Engineering Manifesto",
+    "bio": "I build digital products with an architectural mindset. My goal is to transform complex problems into high-performance, maintainable web systems.",
+    "stack_title": "Tech Stack",
+    "values_title": "Core Values",
+    "values_body": "Clean Architecture & Performance First.",
+    "education_title": "Education",
+    "projects_title": "Featured Projects",
+    "workflow_title": "AI-Native Workflow"
+  },
+  "Stack": {
+    "title": "Capabilities.json",
+    "kernel": "Kernel: 2026.1.0-stable",
+    "system_diagnostic": "System Diagnostics",
+    "latency": "LATENCY",
+    "build_status": "CAREER_STATUS",
+    "ready": "READY_FOR_INTERNSHIP",
+    "section_1": "Main_Runtime",
+    "section_2": "Human_Interface",
+    "tech_1": "Core Development",
+    "tech_1_desc": "Proficiency in TypeScript and React for building reactive, type-safe interfaces.",
+    "tech_2": "Infrastructure & Backend",
+    "tech_2_desc": "Experience with Next.js (App Router), Node.js, and data modeling with MongoDB.",
+    "tech_3": "AI & Prompting",
+    "tech_3_desc": "Advanced use of LLMs to accelerate development and automate complex workflows.",
+    "soft_1": "English_Protocol",
+    "soft_1_desc": "Advanced proficiency for technical reading and direct collaboration within global teams.",
+    "soft_2_title": "Team_Protocol",
+    "soft_2_desc": "I believe software is a team sport. I prioritize radical clarity and proactivity to prevent communication bottlenecks.",
+    "soft_3_title": "Social_Architecture",
+    "soft_3_desc": "I actively apply principles of 'How to Win Friends and Influence People' to foster cooperation and win-win negotiations.",
+    "status_verified": "VERIFIED",
+    "status_stable": "STABLE",
+    "status_optimized": "OPTIMIZED",
+    "active_research": "Active_Research",
+    "research_topic": "Exploring: Graph Databases (Neo4j) & Vector Embeddings",
+    "instance": "Instance",
+    "integrity": "INTEGRITY",
+    "build": "Build",
+    "footer": "End of Diagnostic Report"
+  },
+  "Projects": {
+    "hero_cta": "Launch System",
+    "source_code": "Source Code",
+    "note_title": "Engineering Note",
+    "growmoney": {
+      "hero_desc": "A platform designed to democratize financial education. Content creation with layered data modeling and side-by-side versioning.",
+      "s1_label": "01. Data Architecture",
+      "s1_title": "Structured Content Hierarchy",
+      "s1_body": "I designed the schema to mirror the complexity of a formal curriculum. Data is organized into a four-tier nested structure, enabling high reusability of lessons, concepts, and modules across different financial journeys.",
+      "tier_1": "Lessons",
+      "tier_1_desc": "Atomic content blocks",
+      "tier_2": "Concepts",
+      "tier_2_desc": "Logical groupings",
+      "tier_3": "Modules",
+      "tier_3_desc": "Structural units",
+      "tier_4": "Journeys",
+      "tier_4_desc": "Final student path",
+      "s2_label": "02. Document Governance",
+      "s2_title": "Versioning & Snapshotting",
+      "s2_body_1": "To ensure production stability, I implemented a Side-by-Side Versioning system. Edits to published content do not overwrite the live version; instead, they are captured in a",
+      "s2_body_2": "snapshot.",
+      "s2_guard_title": "Publication Guardrails",
+      "s2_guard_body": "Recursive governance checks prevent an administrator from publishing a Journey if any underlying Module or Lesson remains in a Draft state.",
+      "s3_label": "03. Regionalization",
+      "s3_title": "Regional Injection Engine",
+      "s3_body": "The platform recognizes that financial education is context-dependent. I developed a Universal-to-Regional Transition pattern where the system identifies a user's locale and dynamically injects regional sub-lessons.",
+      "s3_logic_title": "Polymorphic Path Resolution",
+      "s3_logic_body": "By resolving these dependencies at the database level using Aggregation Pipelines, I minimized API payload sizes and avoided the overhead of client-side content swapping.",
+      "s3_tech_1": "Single-Trip Resolution",
+      "s3_tech_2": "Dynamic Path Flattening",
+      "s4_label": "04. Interface Library",
+      "s4_title": "Visual System Exploration",
+      "gallery": {
+        "item_1_title": "Student Experience",
+        "item_1_desc": "Content consumption interface focused on readability and retention, featuring lateral navigation through the journey structure.",
+        "item_2_title": "Governance Control",
+        "item_2_desc": "Administrative panel for status and version management of modules, ensuring integrity before publication.",
+        "item_3_title": "Hierarchy Engine",
+        "item_3_desc": "Editing canvas where concepts and lessons are organized in a modular and scalable manner.",
+        "item_4_title": "Content Editor",
+        "item_4_desc": "Creation environment with support for dynamic regionalization and structured data export tools."
+      },
+      "note": "GrowMoney was my first deep dive into system design. It took months of iterating and refactoring to reach the current state. The content hierarchy—lessons, concepts, modules, journeys—was completely redesigned three times. Versioning also presented a significant challenge, involving strict rules for posting, editing, and deleting content. Future steps for GrowMoney include a more streamlined content creation flow and deeper financial curriculum content.",
+      "footer_status": "System Status: Stable / Production Ready",
+      "footer_copy": "© 2026 Architected by Pedro Pohlmann"
+    },
+    "repocontext": {
+      "hero_desc": "A high-performance codebase ingestion engine designed to transform local repositories into LLM-optimized context.",
+      "perf": "Performance",
+      "acc": "Accessibility",
+      "best": "Best Practices",
+      "seo": "SEO",
+      "s1_label": "01. Optimization",
+      "s1_title": "Filter-at-Source Ingestion",
+      "s1_body": "To handle large codebases without UI lag, I moved the exclusion logic directly into the Recursive Scanner. By validating .gitignore and custom rules before reading, the engine avoids unnecessary processing overhead.",
+      "s1_item_1": "Zero Secondary Re-scans",
+      "s1_item_2": "Automated .gitignore Parsing",
+      "s1_item_3": "Sub-millisecond UI Response",
+      "s1_code_1": "// Early exit strategy",
+      "s1_code_2": "// Recursive walk",
+      "s2_label": "02. Stability",
+      "s2_title": "Bounded Concurrency Model",
+      "s2_body": "Processing 5,000+ file handles simultaneously can crash the browser heap. I implemented a Batching Engine that limits execution to 25 files per pass.",
+      "s2_box_title": "Resource Throttling",
+      "s2_box_body": "This ensured 100% stability, preventing the system from freezing in a 'Parsing' state during extensive parallel executions.",
+      "s2_code_comment": "// Batch implementation",
+      "s3_label": "03. Architecture",
+      "s3_title": "Bundle Optimization & Security",
+      "s3_box_1_title": "Dynamic Tokenization",
+      "s3_box_1_body": "The 5.6MB GPT-4 dictionary is dynamically imported only when required. This reduced the initial JS payload by 85%, ensuring a sub-second Time-to-Interactive.",
+      "s3_box_2_title": "Hardened CSP",
+      "s3_box_2_body": "Implemented a strict Content Security Policy. I balanced security with framework hydration to achieve a 100/100 Lighthouse score.",
+      "note": "RepoContext was a fascinating performance study. I learned that speed isn't just about code—it's about managing browser resources. Moving from unbound parallel execution to a batching model taught me how to build software that is robust enough for real-world production constraints. Plus, the UI turned out great and has been extremely useful!",
+      "footer_status": "Audit Status: 100/100 Verified",
+      "footer_copy": "© 2026 Pedro Pohlmann • Engineering Project"
+    }
+  },
+  "Contact": {
+    "title": "Send Transmission",
+    "subtitle": "Fill the object below to reach out.",
+    "comment_name": "// Your full name",
+    "comment_email": "// Your reply address",
+    "comment_body": "// Message content",
+    "placeholder_name": "'John Doe'",
+    "placeholder_email": "'john@example.com'",
+    "placeholder_body": "'Write your message here...'",
+    "button_sending": "Executing...",
+    "button_success": "SENT SUCCESS",
+    "button_idle": "POST /transmission",
+    "error_msg": "Error sending transmission. Check console.",
+    "success_title": "Transmission Received",
+    "success_body": "Thank you. I have received your message and will respond shortly to your email.",
+    "success_button": "Send another message"
+  },
+  "Roadmap": {
+    "title": "Technical Roadmap",
+    "subtitle": "Strategic planning for the next steps of my career. Focused on building a solid foundation and initiating a journey of continuous development.",
+    "footer_tag": "Goal: Achieve seniority through continuous iteration and learning",
+    "status": {
+      "deployed": "deployed",
+      "active": "active",
+      "queued": "queued"
+    },
+    "stages": {
+      "s1_q": "2022 - 2025",
+      "s1_t": "Technical Foundation (CIMOL)",
+      "s1_d": "IT Technician certification. Core focus on Web Development, Databases, Design, and Computer Networking.",
+      "s2_q": "2025 / Q2 - Q4",
+      "s2_t": "GrowMoney Development - Final Thesis",
+      "s2_d": "Deep dive into data modeling, versioning, and state management. This project cemented the importance of system architecture.",
+      "s3_q": "2025 / Q4 - Present",
+      "s3_t": "Professional Formalization",
+      "s3_d": "Intensive study of JS, TS, React, and Next.js via industry-leading courses to bridge the gap to enterprise-level production.",
+      "s4_q": "2026.Q1 - Future",
+      "s4_t": "Industry Immersion",
+      "s4_d": "Securing a Software Engineering role to apply architectural knowledge within a real-world team and production codebase."
+    }
+  },
+  "Terminal": {
+    "header": "education.txt — bash",
+    "author_label": "Author: Pedro Pohlmann",
+    "commits": {
+      "udemy": {
+        "title": "Continuous Learning - Udemy",
+        "date": "Date: Nov 2025 - Present",
+        "detail": "> Courses: Jonas Schmedtmann (Javascript), Maximilian Schwarzmüller (Next.js, React, TypeScript)."
+      },
+      "growmoney": {
+        "title": "Product Architecture - GrowMoney",
+        "date": "Date: Apr 2025 - Nov 2025",
+        "detail": "> Thesis: Full-stack finance platform featuring layered data modeling and side-by-side versioning."
+      },
+      "cimol": {
+        "title": "IT Technician - CIMOL",
+        "date": "Date: Feb 2022 - Dec 2025",
+        "detail": "> Foundation: Web Systems, Databases, UI Design, Networking, and Programming in C, Java, and Python."
+      }
+    }
+  },
+  "ActivityBar": {
+    "downloadCV": "Download CV (PDF)"
+  },
+  "Wizard": {
+    "skip": "Skip Tour",
+    "next": "Next",
+    "finish": "Got it!",
+    "steps": {
+      "s1_title": "Welcome to my Dev Console",
+      "s1_body": "I designed this space for you to explore my work as if you were in my own code editor. Note: The 'identity.md' file is your 30-second hub with everything you need.",
+      "s2_title": "The Explorer",
+      "s2_body": "Navigate through folders to see the technical specifications of my projects, education, and roadmap.",
+      "s3_title": "Tab Management",
+      "s3_body": "Feel at home. You can open multiple files at once and switch between them using these tabs.",
+      "s4_title": "Global Search",
+      "s4_body": "Looking for something specific? Use the search icon or press 'Ctrl + K' to open the command palette.",
+      "s5_title": "Settings",
+      "s5_body": "The console is yours. Change themes, languages, or interface density here.",
+      "s6_title": "Ready to connect?",
+      "s6_body": "If you like what you see, download my CV here or send me a message via 'contacts.ts'. Shall we build something together?"
     }
   }
 }

@@ -1,26 +1,238 @@
 {
-  "Index": {
-    "title": "Pedro Pohlmann",
-    "role": "Desenvolvedor Full-Stack",
-    "motivation": "Eu programo para construir ferramentas rápidas, confiáveis e boas o suficiente para que eu mesmo as use."
-  },
   "Navigation": {
     "explorer": "Explorador",
     "search": "Pesquisar",
     "settings": "Configurações"
   },
-  "Content": {
-    "identity": {
-      "title": "identidade.md",
-      "body": "Estudante de Engenharia de Software focado em construir utilitários web robustos e escaláveis. Especialista no ecossistema TypeScript, com profundo interesse em otimização de performance e arquitetura de segurança."
+  "Settings": {
+    "appearance": "Aparência",
+    "theme_label": "Tema do Editor",
+    "density_label": "Densidade da Interface",
+    "themes": {
+      "carbon": "Deep Carbon",
+      "classic": "Classic Dark",
+      "contrast": "Alto Contraste"
     },
-    "contacts": {
-      "title": "contatos.ts",
-      "body": ""
+    "densities": {
+      "comfortable": "Confortável",
+      "compact": "Compacto"
     },
-    "education": {
-      "title": "formacao.txt",
-      "body": ""
+    "localization": "Localização",
+    "language_label": "Idioma",
+    "workspace": "Espaço de Trabalho",
+    "persist_tabs": "Persistir Abas",
+    "breadcrumbs": "Breadcrumbs"
+  },
+  "SEO": {
+    "title": "Pedro Pohlmann | Console de Engenharia",
+    "description": "Portfolio interativo de Pedro Pohlmann. Estudante de Engenharia de Software focado em sistemas de alta performance e arquitetura limpa.",
+    "keywords": "Desenvolvedor, Software Engineer, Portfolio, Next.js, React, TypeScript, Pedro Pohlmann"
+  },
+  "Identity": {
+    "title": "identidade.md",
+    "role": "Estudante de Eng. de Software",
+    "location": "Taquara, RS",
+    "ready_badge": "Pronto para Estágio",
+    "cv_button": "Baixar Currículo Completo",
+    "manifesto_label": "Manifesto de Engenharia",
+    "bio": "Construo produtos digitais com foco em arquitetura. Meu objetivo é transformar problemas complexos em sistemas web de alta performance e fácil manutenção.",
+    "stack_title": "Stack Técnica",
+    "values_title": "Valores Base",
+    "values_body": "Arquitetura Limpa & Foco em Performance.",
+    "education_title": "Formação",
+    "projects_title": "Projetos em Destaque",
+    "workflow_title": "Workflow IA-Native"
+  },
+  "Stack": {
+    "title": "Capacidades.json",
+    "kernel": "Kernel: 2026.1.0-stable",
+    "system_diagnostic": "Diagnóstico do Sistema",
+    "latency": "LATÊNCIA",
+    "build_status": "STATUS DE CARREIRA",
+    "ready": "PRONTO_PARA_ESTAGIO",
+    "section_1": "Runtime_Principal",
+    "section_2": "Interface_Humana",
+    "tech_1": "Desenvolvimento Core",
+    "tech_1_desc": "Domínio de TypeScript e React para criação de interfaces reativas e type-safe.",
+    "tech_2": "Infraestrutura & Backend",
+    "tech_2_desc": "Experiência com Next.js (App Router), Node.js e modelagem de dados com MongoDB.",
+    "tech_3": "IA & Prompting",
+    "tech_3_desc": "Uso avançado de LLMs para aceleração de desenvolvimento e automação de fluxos complexos.",
+    "soft_1": "Protocolo_Ingles",
+    "soft_1_desc": "Proficiência avançada para leitura técnica e colaboração direta em times globais.",
+    "soft_2_title": "Team_Protocol",
+    "soft_2_desc": "Acredito que software é um esporte de equipe. Priorizo clareza radical e proatividade para evitar gargalos de comunicação.",
+    "soft_3_title": "Social_Architecture",
+    "soft_3_desc": "Aplico ativamente os princípios de 'Como Fazer Amigos e Influenciar Pessoas' para gerar um ambiente de cooperação, empatia e negociações ganha-ganha.",
+    "status_verified": "VERIFICADO",
+    "status_stable": "ESTÁVEL",
+    "status_optimized": "OTIMIZADO",
+    "active_research": "Pesquisa_Ativa",
+    "research_topic": "Explorando: Bancos de Dados em Grafo (Neo4j) & Vector Embeddings",
+    "instance": "Instância",
+    "integrity": "INTEGRIDADE",
+    "build": "Build",
+    "footer": "Fim do Relatório de Diagnóstico"
+  },
+  "Projects": {
+    "hero_cta": "Lançar Sistema",
+    "source_code": "Código Fonte",
+    "note_title": "Nota de Engenharia",
+    "growmoney": {
+      "hero_desc": "Plataforma que visa democratizar o ensino financeiro. Criação de cursos com modelagem de dados em camadas e versionamento.",
+      "s1_label": "01. Arquitetura de Dados",
+      "s1_title": "Hierarquia de Conteúdo Estruturada",
+      "s1_body": "Projetei o esquema para espelhar a complexidade de um currículo formal. Os dados são organizados em uma estrutura aninhada de quatro níveis, permitindo alta reutilização não só de lições, mas também conceitos e módulos em diferentes jornadas financeiras.",
+      "tier_1": "Lições",
+      "tier_1_desc": "Blocos de conteúdo atômico",
+      "tier_2": "Conceitos",
+      "tier_2_desc": "Agrupamentos lógicos",
+      "tier_3": "Módulos",
+      "tier_3_desc": "Unidades estruturais",
+      "tier_4": "Jornadas",
+      "tier_4_desc": "Caminho final do aluno",
+      "s2_label": "02. Governança de Documentos",
+      "s2_title": "Versionamento & Snapshotting",
+      "s2_body_1": "Para garantir a estabilidade da produção, implementei um sistema de Versionamento Lado-a-Lado. Edições no conteúdo publicado não sobrescrevem a versão ao vivo; em vez disso, elas são capturadas em um",
+      "s2_body_2": "snapshot.",
+      "s2_guard_title": "Travas de Publicação",
+      "s2_guard_body": "Verificações de governança recursivas impedem que um administrador publique uma Jornada se qualquer Módulo ou Lição subjacente permanecer em estado de Rascunho.",
+      "s3_label": "03. Regionalização",
+      "s3_title": "Mecanismo de Injeção Regional",
+      "s3_body": "A plataforma reconhece que a educação financeira depende do contexto. Desenvolvi um padrão de Transição Universal-para-Regional onde o sistema identifica o local de um usuário e injeta dinamicamente sub-lições regionais.",
+      "s3_logic_title": "Resolução de Caminho Polimórfico",
+      "s3_logic_body": "Ao resolver essas dependências no nível do banco de dados usando Aggregation Pipelines, minimizei o tamanho dos payloads da API e evitei o custo de troca de conteúdo no lado do cliente.",
+      "s3_tech_1": "Resolução em Viagem Única",
+      "s3_tech_2": "Achatamento de Caminho Dinâmico",
+      "s4_label": "04. Biblioteca de Interface",
+      "s4_title": "Exploração Visual do Sistema",
+      "gallery": {
+        "item_1_title": "Experiência do Estudante",
+        "item_1_desc": "Interface de consumo de conteúdo focada em legibilidade e retenção, com navegação lateral por estrutura de jornada.",
+        "item_2_title": "Controle de Governança",
+        "item_2_desc": "Painel administrativo para gestão de status e versões de módulos, garantindo integridade antes da publicação.",
+        "item_3_title": "Motor de Hierarquia",
+        "item_3_desc": "Canvas de edição onde conceitos e lições são organizados de forma modular e escalável.",
+        "item_4_title": "Editor de Conteúdo",
+        "item_4_desc": "Ambiente de criação com suporte a regionalização dinâmica e ferramentas de exportação de dados estruturados."
+      },
+      "note": "O GrowMoney foi minha primeira experiencia com design de sistemas. Foram meses criando e refazendo maior parte da aplicação para chegar no que temos hoje. Nem sempre os dados foram organizados em lições, conceitos, módulos e jornadas. Esse esquema na verdade foi completamente modificado três vezes. O versionamento também foi um grande desafio, com todas as regras de postagem, edição e exclusão de conteúdo. Os próximos passos para o GrowMoney são um melhor fluxo de criação de conteúdo e também mais profundidade em relação ao conteúdo em si da plataforma.",
+      "footer_status": "Status do Sistema: Estável / Pronto para Produção",
+      "footer_copy": "© 2026 Arquitetado por Pedro Pohlmann"
+    },
+    "repocontext": {
+      "hero_desc": "Uma ferramenta eficiente feita para transformar repositórios locais em contexto localizado para IAs",
+      "perf": "Performance",
+      "acc": "Acessibilidade",
+      "best": "Boas Práticas",
+      "seo": "SEO",
+      "s1_label": "01. Otimização",
+      "s1_title": "Ingestão com Filtro na Fonte",
+      "s1_body": "Para lidar com grandes bases de código sem travar a interface, movi a lógica de exclusão diretamente para o Scanner Recursivo. Ao validar o .gitignore e regras customizadas antes da leitura, o motor evita processamento desnecessário.",
+      "s1_item_1": "Zero Re-scans Secundários",
+      "s1_item_2": "Parsing Automático de .gitignore",
+      "s1_item_3": "Resposta de UI eficiente",
+      "s1_code_1": "// Estratégia de saída antecipada",
+      "s1_code_2": "// Varredura recursiva",
+      "s2_label": "02. Estabilidade",
+      "s2_title": "Modelo de Concorrência Limitada",
+      "s2_body": "Processar mais de 5.000 arquivos simultaneamente pode estourar a memória do navegador. Implementei um motor de processamento em lotes (Batching) que limita a execução a 25 arquivos por vez.",
+      "s2_box_title": "Controle de Recursos",
+      "s2_box_body": "Isso garantiu uma melhor estabilidade, evitando que o sistema travasse no estado de 'Processando' durante execuções paralelas extensas.",
+      "s2_code_comment": "// Implementação de lotes",
+      "s3_label": "03. Arquitetura",
+      "s3_title": "Otimização de Bundle e Segurança",
+      "s3_box_1_title": "Tokenização Dinâmica",
+      "s3_box_1_body": "O dicionário do GPT-4 (5.6MB) é importado dinamicamente apenas quando necessário. Isso reduziu o peso inicial do site em 85%, garantindo um carregamento instantâneo.",
+      "s3_box_2_title": "CSP Fortalecida",
+      "s3_box_2_body": "Implementei uma Política de Segurança de Conteúdo rigorosa. Equilibrei segurança com a hidratação do framework para atingir nota máxima no Lighthouse.",
+      "note": "RepoContext foi uma ferramenta bem divertida de se desenvolver. Aprendi sobre performance, sobre scores no lighthouse, e como eu posso ter resultados mais eficientes no ambito de desenvolvimento. Aprendi que não preciso fazer algo perfeito de início, assim acabando com a paralisia do perfeccionismo. No fim, a UI ficou massa, ele funciona bem e tá sendo super útil!",
+      "footer_status": "Status da Auditoria: 100/100 Verificado",
+      "footer_copy": "© 2026 Pedro Pohlmann • Projeto de Engenharia"
+    }
+  },
+  "Contact": {
+    "title": "Enviar Transmissão",
+    "subtitle": "Preencha o objeto abaixo para entrar em contato.",
+    "comment_name": "// Seu nome completo",
+    "comment_email": "// Seu endereço de resposta",
+    "comment_body": "// Conteúdo da mensagem",
+    "placeholder_name": "'Seu Nome'",
+    "placeholder_email": "'seu@email.com'",
+    "placeholder_body": "'Escreva sua mensagem aqui...'",
+    "button_sending": "Executando...",
+    "button_success": "SUCESSO NO ENVIO",
+    "button_idle": "POST /transmissao",
+    "error_msg": "Erro ao enviar transmissão. Verifique o console.",
+    "success_title": "Transmissão Recebida",
+    "success_body": "Obrigado. Recebi sua mensagem e responderei em breve no seu e-mail.",
+    "success_button": "Enviar outra mensagem"
+  },
+  "Roadmap": {
+    "title": "Meus Objetivos",
+    "subtitle": "Planejamento dos próximos passos da minha carreira. Construir uma boa fundação e dar início a uma jornada de desenvolvimento e aprimoramento de habilidades.",
+    "footer_tag": "Meta: Se tornar um ótimo profissional através de aprendizado contínuo",
+    "status": {
+      "deployed": "concluído",
+      "active": "ativo",
+      "queued": "planejado"
+    },
+    "stages": {
+      "s1_q": "2022 - 2025",
+      "s1_t": "Fundação Técnica (CIMOL)",
+      "s1_d": "Ensino Médio e Técnico em Informática. Base em desenvolvimento WEB, Banco de Dados, Design e Redes de Computadores.",
+      "s2_q": "2025 / T2 - T4",
+      "s2_t": "Desenvolvimento do GrowMoney - Meu TCC",
+      "s2_d": "Foco em modelagem de dados, versionamento e gestão de estado. Aqui aprendi a importância de arquitetar cada parte de um sistema.",
+      "s3_q": "2025 / T4 - Agora",
+      "s3_t": "Formalização e Cursos Udemy",
+      "s3_d": "Estudo intensivo de JS, TS, React e NextJS com cursos renomados na Udemy.",
+      "s4_q": "2026.Q1 - Futuro",
+      "s4_t": "Estágio e Efetivação",
+      "s4_d": "Ingressar no mercado profissional, aplicar conhecimentos em um time real e concluir a certificação técnica através das 400h de estágio."
+    }
+  },
+  "Terminal": {
+    "header": "formacao.txt — bash",
+    "author_label": "Autor: Pedro Pohlmann",
+    "commits": {
+      "udemy": {
+        "title": "Aprendizado Contínuo - Udemy",
+        "date": "Data: Nov 2025 - Presente",
+        "detail": "> Cursos: Jonas Schmedtmann (Javascript), Maximilian Schwarzmüller (Next.js, React, TypeScript)."
+      },
+      "growmoney": {
+        "title": "Arquitetura de Produto - GrowMoney",
+        "date": "Data: Abr 2025 - Nov 2025",
+        "detail": "> TCC: Plataforma de ensino financeiro. Criação de cursos com modelagem de dados em camadas e versionamento."
+      },
+      "cimol": {
+        "title": "Técnico em Informática - CIMOL",
+        "date": "Data: Fev 2022 - Dez 2025",
+        "detail": "> Base: Criação de Sites, Banco de Dados, Design, Redes de Computadores, Sistemas Operacionais, Manutenção de Computadores, Programação em C, Java e Python"
+      }
+    }
+  },
+  "ActivityBar": {
+    "downloadCV": "Baixar Currículo (PDF)"
+  },
+  "Wizard": {
+    "skip": "Pular Guia",
+    "next": "Próximo",
+    "finish": "Entendi!",
+    "steps": {
+      "s1_title": "Bem-vindo ao meu Console",
+      "s1_body": "Projetei este espaço para você explorar meu trabalho como se estivesse no meu próprio editor. Dica: O arquivo 'identity.md' é seu resumo de 30 segundos com tudo o que precisa.",
+      "s2_title": "O Explorador",
+      "s2_body": "Navegue pelas pastas para ver detalhes técnicos dos meus projetos, formação e roadmap.",
+      "s3_title": "Gestão de Abas",
+      "s3_body": "Sinta-se em casa. Você pode abrir vários arquivos ao mesmo tempo e alternar entre eles usando estas abas.",
+      "s4_title": "Busca Global",
+      "s4_body": "Procurando algo específico? Use o ícone de busca ou 'Ctrl + K' para abrir a paleta de comandos.",
+      "s5_title": "Configurações",
+      "s5_body": "O console é seu. Mude temas, idiomas ou a densidade da interface aqui.",
+      "s6_title": "Vamos conversar?",
+      "s6_body": "Se gostou do que viu, baixe meu currículo aqui ou me envie uma mensagem em 'contacts.ts'. Vamos construir algo juntos?"
     }
   }
 }

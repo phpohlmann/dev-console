@@ -30,7 +30,7 @@ const FileIcon = ({
 }) => {
   const className = cn(
     "w-4 h-4",
-    isSelected ? "text-primary" : "text-muted-foreground/70"
+    isSelected ? "text-primary" : "text-muted-foreground/70",
   );
 
   switch (extension) {
@@ -65,13 +65,30 @@ export function NavNode({ node, level }: NavNodeProps) {
     }
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      if (isDirectory) {
+        setIsOpen(!isOpen);
+      } else {
+        openFile(node.id);
+      }
+    }
+  };
+
   return (
-    <div className="group">
-      <div
+    <div
+      className="group"
+      id={node.id === "contacts.ts" ? "tour-contacts" : undefined}
+    >
+      <button
         onClick={handleClick}
+        onKeyDown={handleKeyDown}
+        aria-expanded={isDirectory ? isOpen : undefined}
+        aria-label={`${isDirectory ? "Folder" : "File"}: ${node.name}`}
         className={cn(
-          "flex items-center py-1 px-2 hover:bg-accent/50 cursor-pointer transition-all duration-150 relative border-l-2 border-transparent",
-          isSelected && !isDirectory && "bg-primary/5 border-l-primary"
+          "flex items-center w-full py-1 px-2 hover:bg-accent/50 cursor-pointer transition-all duration-150 relative border-l-2 border-transparent outline-none focus-visible:bg-accent",
+          isSelected && !isDirectory && "bg-primary/5 border-l-primary",
         )}
         style={{ paddingLeft: `${level * 12 + 12}px` }}
       >
@@ -103,16 +120,19 @@ export function NavNode({ node, level }: NavNodeProps) {
               "text-sm truncate transition-colors",
               isSelected
                 ? "text-foreground font-medium"
-                : "text-muted-foreground group-hover:text-foreground"
+                : "text-muted-foreground group-hover:text-foreground",
             )}
           >
             {node.name}
           </span>
         </div>
-      </div>
+      </button>
 
       {isDirectory && isOpen && node.children && (
-        <div className="animate-in fade-in slide-in-from-left-1 duration-200">
+        <div
+          className="animate-in fade-in slide-in-from-left-1 duration-200"
+          role="group"
+        >
           {node.children.map((child) => (
             <NavNode key={child.id} node={child} level={level + 1} />
           ))}

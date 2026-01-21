@@ -43,7 +43,6 @@
 
 @layer base {
   :root {
-    /* Soft Light Mode */
     --background: 0 0% 98%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
@@ -67,7 +66,6 @@
   }
 
   .dark {
-    /* DEFAULT: Deep Carbon */
     --background: 240 10% 4%;
     --foreground: 0 0% 98%;
     --card: 240 10% 6%;
@@ -89,24 +87,26 @@
     --ring: 240 4.9% 83.9%;
   }
 
-  /* Variant: Classic Dark */
   .dark[data-theme='classic-dark'] {
-    --background: 240 5% 12%;
-    --card: 240 5% 10%;
-    --muted: 240 5% 15%;
-    --border: 240 5% 20%;
+    --background: 222 47% 11%;
+    --card: 222 47% 13%;
+    --muted: 222 47% 18%;
+    --border: 217 32% 20%;
+    --accent: 217 32% 25%;
   }
 
-  /* Variant: High Contrast */
   .dark[data-theme='high-contrast'] {
     --background: 0 0% 0%;
     --card: 0 0% 0%;
-    --border: 0 0% 30%;
-    --primary: 0 0% 100%;
-    --muted: 0 0% 15%;
+    --border: 0 0% 100%;
+    --primary: 60 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 100%;
+    --accent: 0 0% 100%;
+    --accent-foreground: 0 0% 0%;
   }
 
-  /* --- DENSITY ENGINE --- */
   [data-density='compact'] {
     font-size: 13px;
   }
@@ -129,10 +129,9 @@
     @apply antialiased;
   }
 
-  /* --- SENIOR CUSTOM SCROLLBAR --- */
   ::-webkit-scrollbar {
     width: 10px;
-    height: 4px; /* Thin horizontal scrollbar for tabs */
+    height: 4px;
   }
 
   ::-webkit-scrollbar-track {
@@ -151,7 +150,6 @@
     background-clip: content-box;
   }
 
-  /* Utility to hide scrollbars while keeping functionality */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
@@ -159,4 +157,9 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+}
+
+@keyframes border-glow-spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
 }

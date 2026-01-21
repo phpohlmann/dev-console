@@ -1,4 +1,3 @@
-// MODIFICATION START
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 
@@ -11,8 +10,8 @@ interface UIState {
   isSidebarOpen: boolean;
   activeFileId: string | null;
   openFiles: string[];
+  isCommandMenuOpen: boolean;
 
-  // Settings State
   theme: AppTheme;
   density: AppDensity;
   persistTabs: boolean;
@@ -22,8 +21,8 @@ interface UIState {
   toggleSidebar: (force?: boolean) => void;
   openFile: (fileId: string) => void;
   closeFile: (fileId: string) => void;
+  setCommandMenuOpen: (open: boolean) => void;
 
-  // Settings Actions
   setTheme: (theme: AppTheme) => void;
   setDensity: (density: AppDensity) => void;
   setPersistTabs: (val: boolean) => void;
@@ -37,6 +36,7 @@ export const useUIStore = create<UIState>()(
       isSidebarOpen: true,
       activeFileId: "identity.md",
       openFiles: ["identity.md"],
+      isCommandMenuOpen: false,
 
       theme: "deep-carbon",
       density: "comfortable",
@@ -76,6 +76,8 @@ export const useUIStore = create<UIState>()(
           };
         }),
 
+      setCommandMenuOpen: (open) => set({ isCommandMenuOpen: open }),
+
       setTheme: (theme) => set({ theme }),
       setDensity: (density) => set({ density }),
       setPersistTabs: (persistTabs) => set({ persistTabs }),
@@ -84,7 +86,6 @@ export const useUIStore = create<UIState>()(
     {
       name: "pedro-console-settings",
       storage: createJSONStorage(() => localStorage),
-      // Only persist workspace settings, not UI navigation state
       partialize: (state) => ({
         theme: state.theme,
         density: state.density,
@@ -93,7 +94,6 @@ export const useUIStore = create<UIState>()(
         openFiles: state.persistTabs ? state.openFiles : [],
         activeFileId: state.persistTabs ? state.activeFileId : null,
       }),
-    }
-  )
+    },
+  ),
 );
-// MODIFICATION END
