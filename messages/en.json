@@ -25,12 +25,12 @@
   },
   "SEO": {
     "title": "Pedro Pohlmann | Engineering Console",
-    "description": "Interactive portfolio of Pedro Pohlmann. Software Engineering student focused on high-performance systems and clean architecture.",
+    "description": "Interactive portfolio of Pedro Pohlmann. Software Development student focused on high-performance systems and clean architecture.",
     "keywords": "Developer, Software Engineer, Portfolio, Next.js, React, TypeScript, Pedro Pohlmann"
   },
   "Identity": {
     "title": "identity.md",
-    "role": "Software Engineering Student",
+    "role": "Software Development Student",
     "location": "Taquara, Brazil",
     "ready_badge": "Open to Work",
     "cv_button": "Download Full CV",
